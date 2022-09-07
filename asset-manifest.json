@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/profile/static/css/main.cd954502.css",
+    "main.js": "/profile/static/js/main.e1c0a6d1.js",
+    "static/js/787.c8e4471e.chunk.js": "/profile/static/js/787.c8e4471e.chunk.js",
+    "static/media/hero2.JPG": "/profile/static/media/hero2.0ddcf5981af96395b0cd.JPG",
+    "static/media/Chess.png": "/profile/static/media/Chess.5dbe9268d1b6af78e86d.png",
+    "static/media/Cana.png": "/profile/static/media/Cana.29c85393ef4d69509b5e.png",
+    "static/media/outreach1.jpg": "/profile/static/media/outreach1.dfb77c7cf084a2d16611.jpg",
+    "static/media/logo.png": "/profile/static/media/logo.c850ea6551cae9addd68.png",
+    "static/media/outreach2.jpg": "/profile/static/media/outreach2.5e546faf7f744c5ef74c.jpg",
+    "static/media/shs.png": "/profile/static/media/shs.b01d996b9bae51c0acfe.png",
+    "static/media/phildev.jpg": "/profile/static/media/phildev.6eae6b6f56ec95eb7e00.jpg",
+    "static/media/sigma.jpg": "/profile/static/media/sigma.57cb121fe37e3a72b93c.jpg",
+    "static/media/infoSession.jpg": "/profile/static/media/infoSession.b15cec11ab0a6826f623.jpg",
+    "static/media/about.JPG": "/profile/static/media/about.fa8c9d280b8afabe65f1.JPG",
+    "static/media/gdsc.jpg": "/profile/static/media/gdsc.f699a2096f84f4e17f0a.jpg",
+    "static/media/phildevBanner.jpg": "/profile/static/media/phildevBanner.0630f014df90e5a1bd7e.jpg",
+    "static/media/coreTeamCert.jpg": "/profile/static/media/coreTeamCert.ddccdd23bbdfafbde2fd.jpg",
+    "static/media/wcc.jpg": "/profile/static/media/wcc.42054d23f6b5bc0f407b.jpg",
+    "static/media/AeroQueue2.png": "/profile/static/media/AeroQueue2.8cb14783d940bfaff368.png",
+    "static/media/saribase.png": "/profile/static/media/saribase.6258710f9b8356d1e859.png",
+    "static/media/sancarlos.jpg": "/profile/static/media/sancarlos.9a9831911fae7b9b5983.jpg",
+    "static/media/Landgo.png": "/profile/static/media/Landgo.b07d2e00a6cdf97eee1a.png",
+    "index.html": "/profile/index.html",
+    "main.cd954502.css.map": "/profile/static/css/main.cd954502.css.map",
+    "main.e1c0a6d1.js.map": "/profile/static/js/main.e1c0a6d1.js.map",
+    "787.c8e4471e.chunk.js.map": "/profile/static/js/787.c8e4471e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd954502.css",
+    "static/js/main.e1c0a6d1.js"
+  ]
+}
