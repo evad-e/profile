@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
+
+const LOGO = import.meta.env.BASE_URL + "logo.png";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -30,13 +32,12 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2 group">
-          <div className="p-1.5 rounded-lg bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-500/20 group-hover:border-indigo-500/40 transition-colors">
-            <Code2 className="w-4 h-4 text-indigo-400" />
-          </div>
-          <span className="text-white/80 font-semibold text-sm tracking-wide group-hover:text-white transition-colors">
-            CDE
-          </span>
+        <a href="#hero" className="flex items-center group">
+          <img
+            src={LOGO}
+            alt="CD Empinado"
+            className="h-9 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity invert brightness-90"
+          />
         </a>
 
         {/* Desktop nav */}

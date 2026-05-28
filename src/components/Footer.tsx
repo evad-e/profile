@@ -1,5 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 
+const LOGO = import.meta.env.BASE_URL + "logo.png";
+
 export default function Footer() {
   return (
     <footer className="relative py-10 bg-[#030303] border-t border-white/[0.06]">
@@ -33,7 +35,10 @@ export default function Footer() {
           </a>
         </div>
 
-        <p className="text-white/20 text-xs">© 2026 Christian Dave Empinado</p>
+        <div className="flex items-center gap-3">
+          <img src={LOGO} alt="CD Empinado" className="h-7 w-auto object-contain opacity-40 invert brightness-90" />
+          <p className="text-white/20 text-xs">© 2026 Christian Dave Empinado</p>
+        </div>
       </div>
     </footer>
   );
