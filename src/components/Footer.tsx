@@ -4,9 +4,6 @@ export default function Footer() {
   return (
     <footer className="relative py-10 bg-[#030303] border-t border-white/[0.06]">
       <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-white/30 text-sm flex items-center gap-1.5">
-          Built with <Heart className="w-3 h-3 text-rose-500 fill-rose-500" /> by Christian Dave Empinado
-        </p>
 
         <div className="flex items-center gap-4">
           <a
