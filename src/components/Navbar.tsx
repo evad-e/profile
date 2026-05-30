@@ -36,7 +36,7 @@ export default function Navbar() {
           <img
             src={LOGO}
             alt="CD Empinado"
-            className="h-9 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity invert brightness-90"
+            className="h-20 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity invert brightness-90"
           />
         </a>
 

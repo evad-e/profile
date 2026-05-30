@@ -26,7 +26,7 @@ const skills = [
     color: "from-cyan-500/20 to-cyan-500/5",
     border: "border-cyan-500/20",
     iconColor: "text-cyan-400",
-    items: ["Docker", "Microsoft Azure", "Databricks SQL", "MLflow Integration", "GitHub"],
+    items: ["Docker", "Microsoft Azure", "Databricks SQL", "MLflow Integration", "GitHub", "AWS"],
   },
   {
     category: "CRM & Platforms",

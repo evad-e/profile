@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 // Profile image served from /public/profile.jpg — add your photo there
 const PROFILE_IMG = import.meta.env.BASE_URL + "profile.jpg";
-
+const available = true;
 function ElegantShape({
   className,
   delay = 0,
@@ -115,7 +115,7 @@ export default function Hero() {
                 <UserCircle2 className="w-3/4 h-3/4 text-white/20" />
               </div>
               {/* Online indicator */}
-              <div className="absolute bottom-4 right-4 w-5 h-5 bg-emerald-400 rounded-full border-2 border-[#030303] shadow-lg">
+              <div className={`${available ? '' : 'hidden'} absolute bottom-4 right-4 w-5 h-5 bg-emerald-400 rounded-full border-2 border-[#030303] shadow-lg`}>
                 <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-75" />
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function Hero() {
               variants={fadeUpVariants}
               initial="hidden"
               animate="visible"
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-6"
+              className={`${available ? 'inline-flex' : 'hidden'} items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-6`}
             >
               <Circle className="h-2 w-2 fill-emerald-500/80 text-emerald-500/80" />
               <span className="text-sm text-white/60 tracking-wide">Available for opportunities</span>
@@ -154,7 +154,7 @@ export default function Hero() {
 
             <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
               <p className="text-base text-white/35 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Building robust web applications and business systems with Laravel, ReactJS, Python, and modern cloud technologies.
+                Building robust web applications and business systems with WordPress, Laravel, ReactJS, Python, and modern cloud technologies.
               </p>
             </motion.div>
 
@@ -184,7 +184,7 @@ export default function Hero() {
                 <span className="hidden sm:inline">cd.empinado@gmail.com</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/christian-dave-empinado"
+                href="https://www.linkedin.com/in/cd-empinado/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/40 hover:text-indigo-400 transition-colors"

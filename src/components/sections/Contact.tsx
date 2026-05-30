@@ -38,7 +38,7 @@ export default function Contact() {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Christian Dave Empinado",
-      href: "https://www.linkedin.com/in/christian-dave-empinado",
+      href: "https://www.linkedin.com/in/cd-empinado/",
       color: "text-blue-400",
       bg: "bg-blue-500/10",
     },

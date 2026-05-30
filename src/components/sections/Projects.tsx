@@ -7,7 +7,7 @@ const projects = [
   {
     title: "80+ WordPress Website Launches",
     description:
-      "Led the full lifecycle of 80+ client WordPress websites at Dealer Lux — from initial setup and custom theme/plugin work to performance optimization, post-launch support, and ongoing maintenance.",
+      "Contributed to the launch and ongoing maintenance of 80+ client WordPress websites, delivering custom theme and plugin development, performance optimizations, troubleshooting, and post-launch support.",
     tags: ["WordPress", "PHP", "HTML/CSS", "Performance", "SEO"],
     icon: Globe,
     color: "from-indigo-500/15 to-indigo-500/0",

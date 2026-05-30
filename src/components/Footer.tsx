@@ -25,7 +25,7 @@ export default function Footer() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            href="https://www.linkedin.com/in/christian-dave-empinado"
+            href="https://www.linkedin.com/in/cd-empinado/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/30 hover:text-blue-400 transition-colors"
@@ -36,7 +36,6 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-3">
-          <img src={LOGO} alt="CD Empinado" className="h-7 w-auto object-contain opacity-40 invert brightness-90" />
           <p className="text-white/20 text-xs">© 2026 Christian Dave Empinado</p>
         </div>
       </div>

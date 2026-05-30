@@ -80,7 +80,7 @@ export default function Certifications() {
             Credentials
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-            Certifications &amp; Achievements
+            Achievements &amp; Certifications
           </h2>
           <p className="mt-4 text-white/40 max-w-lg mx-auto">
             Validated expertise across cloud, DevOps, CRM platforms, and academic research.
