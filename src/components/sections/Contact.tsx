@@ -2,20 +2,17 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Mail, Phone, Linkedin, Github, MapPin, Send, CheckCircle } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const mailto = `mailto:cd.empinado@gmail.com?subject=${encodeURIComponent(data.get("subject") as string)}&body=${encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`)}`;
-    window.location.href = mailto;
+  const [state, handleSubmit] = useForm("xlgvkbwd");
+  if (state.succeeded && !sent) {
     setSent(true);
-  };
+  }
 
   const contacts = [
     {
@@ -134,7 +131,7 @@ export default function Contact() {
             {sent ? (
               <div className="flex flex-col items-center justify-center h-64 gap-4 p-8 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-500/0 border border-emerald-500/20">
                 <CheckCircle className="w-12 h-12 text-emerald-400" />
-                <p className="text-white/70 text-center">Your email client should have opened. Looking forward to your message!</p>
+                <p className="text-white/70 text-center">Sent. Looking forward to your message!</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -148,6 +145,11 @@ export default function Contact() {
                       placeholder="Your name"
                       className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/80 placeholder-white/20 text-sm focus:outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-all"
                     />
+                    <ValidationError 
+                        prefix="Name" 
+                        field="name"
+                        errors={state.errors}
+                    />
                   </div>
                   <div>
                     <label className="block text-white/40 text-xs mb-1.5 tracking-wide">Email</label>
@@ -157,6 +159,11 @@ export default function Contact() {
                       required
                       placeholder="your@email.com"
                       className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/80 placeholder-white/20 text-sm focus:outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-all"
+                    />
+                    <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
                     />
                   </div>
                 </div>
@@ -179,13 +186,26 @@ export default function Contact() {
                     placeholder="Tell me about your project or opportunity..."
                     className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white/80 placeholder-white/20 text-sm focus:outline-none focus:border-indigo-500/50 focus:bg-white/[0.06] transition-all resize-none"
                   />
+                  <ValidationError 
+                    prefix="Message" 
+                    field="message"
+                    errors={state.errors}
+                  />
                 </div>
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-medium text-sm hover:from-indigo-500 hover:to-violet-500 transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40"
+                  disabled={state.submitting}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-medium text-sm hover:from-indigo-500 hover:to-violet-500 transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  Send Message
+                  {state.submitting ? (
+                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                    </svg>
+                  ) : (
+                    <Send className="w-4 h-4" />
+                  )}
+                  {state.submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
