@@ -1,7 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 
-const LOGO = import.meta.env.BASE_URL + "logo.png";
-
 export default function Footer() {
   return (
     <footer className="relative py-10 bg-[#030303] border-t border-white/[0.06]">
